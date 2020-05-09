@@ -21,5 +21,6 @@ class Artist
    @@song_count = 0
    add_song(song)
    @@song_count +=1
+   binding.pry
  end
 end

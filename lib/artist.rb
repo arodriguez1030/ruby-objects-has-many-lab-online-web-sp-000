@@ -22,4 +22,5 @@ class Artist
    add_song(song)
    @@song_count +=1 
    add_song_by_name(song_name)
+   @@song_count +=1
 end

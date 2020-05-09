@@ -4,4 +4,14 @@ class Author
     @name = name
     @posts= []
   end
+   def posts
+   Post.all.select {|post| post.author == self}
+ end
+ def add_post(post)
+   post.author = self
+ end
+ def add_post_by_name(post_title)
+ post_title = Post.new(title)
+ post_title.author = self
+ end
 end

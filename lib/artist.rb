@@ -1,11 +1,19 @@
+require 'pry'
+
 class Artist
   attr_accessor :name
   
   def initialize(name)
     @name = name
-    @songs = []
   end
  def songs
-   @songs << Song.name.artist
+   Song.all.select {|song| song.artist == self}
+ end
+ def add_song(song)
+   song.artist = self
+ end
+ def add_song_by_name(song_name)
+ song_name = Song.new(name)
+ song_name.artist = self
  end
 end
